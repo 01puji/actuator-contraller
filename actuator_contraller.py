@@ -32,7 +32,7 @@ try:
     print(f"{SERIAL_PORT} 포트를 연결했습니다.")
 except serial.SerialException as e:
     print(f"{SERIAL_PORT} 포트를 연결을 못합니다.: {e}")
-    sys.exit(1)  # 退出程序
+    sys.exit(1)  
 
 # 오디오 변수
 FORMAT = pyaudio.paInt24
@@ -157,7 +157,7 @@ def send_command(command):
         print("포트가 열리지 않아 명령을 보낼 수 없습니다.")
 
 def main():
-    while True:  # 持续循环
+    while True: 
         print("프로그램 시작했습니다.")
         start_recording()
         time.sleep(3)  # 녹음시간
